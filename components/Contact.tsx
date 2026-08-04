@@ -118,7 +118,7 @@ export default function Contact() {
 
           <div className="flex-1 min-h-[220px] overflow-hidden card-frame">
             <iframe
-              title="Solene Events studio location"
+              title="Saico Events studio location"
               src="https://www.google.com/maps?q=Ilica%2042%2C%20Zagreb&output=embed"
               className="h-full w-full min-h-[220px] grayscale contrast-125"
               loading="lazy"

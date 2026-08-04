@@ -61,7 +61,7 @@ export const upcomingEvents: UpcomingEvent[] = [
     id: "ue-4",
     title: "New Year, Reimagined",
     date: "Dec 31, 2026",
-    location: "Rooftop Solene, Zagreb",
+    location: "Rooftop Saico, Zagreb",
     description: "A midnight celebration overlooking the city skyline.",
     image:
       "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?q=80&w=1400&auto=format&fit=crop",
@@ -72,8 +72,7 @@ export const upcomingEvents: UpcomingEvent[] = [
     date: "Aug 08, 2026",
     location: "Mlinska 151, Osijek",
     description: "Ludi party",
-    image:
-      "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?q=80&w=1400&auto=format&fit=crop",
+    image: "slika_kuce.avif",
   },
 ];
 
