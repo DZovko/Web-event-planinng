@@ -9,7 +9,7 @@ const LINKS = [
   { href: "#events", label: "Events" },
   { href: "#gallery", label: "Gallery" },
   { href: "#past", label: "Past Work" },
-  { href: "#testimonials", label: "Testimonials" },
+
   { href: "#contact", label: "Contact" },
 ];
 
@@ -30,7 +30,9 @@ export default function Navbar() {
       animate={{ y: 0 }}
       transition={{ duration: 0.7, ease: "easeOut" }}
       className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-500 ${
-        solid ? "bg-cream/95 backdrop-blur border-b border-ink/10" : "bg-transparent"
+        solid
+          ? "bg-cream/95 backdrop-blur border-b border-ink/10"
+          : "bg-transparent"
       }`}
     >
       <div className="container-x flex items-center justify-between h-20">
