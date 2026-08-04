@@ -44,11 +44,12 @@ export default function PreviousEvents() {
                 <Users size={14} /> {ev.guests} guests
               </p>
 
-              <div className="mt-4">
+              <div className="mt-4 inline-flex bg-black/30 backdrop-blur-sm rounded-lg px-3 py-2">
                 <MusicBadge
                   track={ev.music.track}
                   artist={ev.music.artist}
                   albumArt={ev.music.albumArt}
+                  variant="dark"
                 />
               </div>
 

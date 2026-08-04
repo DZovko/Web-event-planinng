@@ -154,13 +154,21 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.85, ease: "easeOut" }}
-          className="mt-8"
+          className="mt-8 max-w-md"
         >
-          <MusicBadge
-            track={currentEvent.music.track}
-            artist={currentEvent.music.artist}
-            albumArt={currentEvent.music.albumArt}
-          />
+          <div className="flex items-center gap-4 bg-white/[0.06] backdrop-blur border border-white/15 px-5 py-4">
+            <span className="hidden sm:block text-[11px] tracking-widest2 uppercase text-gold-light shrink-0 [writing-mode:vertical-rl] rotate-180">
+              Now Playing
+            </span>
+            <span className="hidden sm:block h-14 w-px bg-white/15" />
+            <MusicBadge
+              track={currentEvent.music.track}
+              artist={currentEvent.music.artist}
+              albumArt={currentEvent.music.albumArt}
+              variant="dark"
+              size="lg"
+            />
+          </div>
         </motion.div>
       </div>
     </section>
