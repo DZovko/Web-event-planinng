@@ -4,6 +4,7 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 import { ArrowLeft, ArrowRight, MapPin } from "lucide-react";
 import { upcomingEvents } from "@/lib/data";
+import MusicBadge from "@/components/MusicBadge";
 
 export default function UpcomingEvents() {
   const trackRef = useRef<HTMLDivElement>(null);
@@ -62,12 +63,26 @@ export default function UpcomingEvents() {
               />
             </div>
             <div className="p-6">
-              <span className="text-xs tracking-widest2 uppercase text-gold-dark">{ev.date}</span>
-              <h3 className="font-display text-xl font-medium text-ink mt-2">{ev.title}</h3>
+              <span className="text-xs tracking-widest2 uppercase text-gold-dark">
+                {ev.date}
+              </span>
+              <h3 className="font-display text-xl font-medium text-ink mt-2">
+                {ev.title}
+              </h3>
               <p className="flex items-center gap-1.5 text-ink/50 text-sm mt-2">
                 <MapPin size={14} /> {ev.location}
               </p>
-              <p className="text-ink/65 text-sm mt-3 leading-relaxed">{ev.description}</p>
+              <p className="text-ink/65 text-sm mt-3 leading-relaxed">
+                {ev.description}
+              </p>
+
+              <div className="hairline-solid my-4" />
+              <MusicBadge
+                track={ev.music.track}
+                artist={ev.music.artist}
+                albumArt={ev.music.albumArt}
+              />
+
               <a
                 href="#contact"
                 className="inline-block mt-5 text-sm font-semibold text-ink border-b border-gold pb-0.5 hover:text-gold-dark transition-colors"

@@ -5,6 +5,11 @@ export type UpcomingEvent = {
   location: string;
   description: string;
   image: string;
+  music: {
+    track: string;
+    artist: string;
+    albumArt: string;
+  };
 };
 
 export type PastEvent = {
@@ -14,6 +19,11 @@ export type PastEvent = {
   guests: number;
   category: string;
   image: string;
+  music: {
+    track: string;
+    artist: string;
+    albumArt: string;
+  };
 };
 
 export const currentEvent = {
@@ -25,6 +35,12 @@ export const currentEvent = {
   location: "Meridian Hall, Zagreb",
   image:
     "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2400&auto=format&fit=crop",
+  music: {
+    track: "Velvet Hour",
+    artist: "Nocturne Quartet",
+    albumArt:
+      "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400&auto=format&fit=crop",
+  },
 };
 
 export const upcomingEvents: UpcomingEvent[] = [
@@ -37,6 +53,12 @@ export const upcomingEvents: UpcomingEvent[] = [
       "A black-tie anniversary gala beneath a restored glass atrium.",
     image:
       "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1400&auto=format&fit=crop",
+    music: {
+      track: "Velvet Hour",
+      artist: "Nocturne Quartet",
+      albumArt:
+        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400&auto=format&fit=crop",
+    },
   },
   {
     id: "ue-2",
@@ -46,6 +68,12 @@ export const upcomingEvents: UpcomingEvent[] = [
     description: "A seated harvest dinner paired with six coastal vineyards.",
     image:
       "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1400&auto=format&fit=crop",
+    music: {
+      track: "Coastal Table",
+      artist: "Marin Ivić Trio",
+      albumArt:
+        "https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?q=80&w=400&auto=format&fit=crop",
+    },
   },
   {
     id: "ue-3",
@@ -56,6 +84,12 @@ export const upcomingEvents: UpcomingEvent[] = [
       "A curated design showcase and cocktail evening for 200 guests.",
     image:
       "https://images.unsplash.com/photo-1478146059778-26028b07395a?q=80&w=1400&auto=format&fit=crop",
+    music: {
+      track: "Coastal Table",
+      artist: "Marin Ivić Trio",
+      albumArt:
+        "https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?q=80&w=400&auto=format&fit=crop",
+    },
   },
   {
     id: "ue-4",
@@ -65,6 +99,12 @@ export const upcomingEvents: UpcomingEvent[] = [
     description: "A midnight celebration overlooking the city skyline.",
     image:
       "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?q=80&w=1400&auto=format&fit=crop",
+    music: {
+      track: "Coastal Table",
+      artist: "Marin Ivić Trio",
+      albumArt:
+        "https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?q=80&w=400&auto=format&fit=crop",
+    },
   },
   {
     id: "ue-5",
@@ -73,6 +113,12 @@ export const upcomingEvents: UpcomingEvent[] = [
     location: "Mlinska 151, Osijek",
     description: "Ludi party",
     image: "slika_kuce.avif",
+    music: {
+      track: "Boston",
+      artist: "venok",
+      albumArt:
+        "https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?q=80&w=400&auto=format&fit=crop",
+    },
   },
 ];
 
@@ -123,6 +169,12 @@ export const pastEvents: PastEvent[] = [
     category: "Gala",
     image:
       "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1200&auto=format&fit=crop",
+    music: {
+      track: "Velvet Hour",
+      artist: "Nocturne Quartet",
+      albumArt:
+        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400&auto=format&fit=crop",
+    },
   },
   {
     id: "pe-2",
@@ -132,6 +184,12 @@ export const pastEvents: PastEvent[] = [
     category: "Wedding",
     image:
       "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
+    music: {
+      track: "Velvet Hour",
+      artist: "Nocturne Quartet",
+      albumArt:
+        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400&auto=format&fit=crop",
+    },
   },
   {
     id: "pe-3",
@@ -141,6 +199,12 @@ export const pastEvents: PastEvent[] = [
     category: "Corporate",
     image:
       "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop",
+    music: {
+      track: "Velvet Hour",
+      artist: "Nocturne Quartet",
+      albumArt:
+        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400&auto=format&fit=crop",
+    },
   },
   {
     id: "pe-4",
@@ -150,6 +214,12 @@ export const pastEvents: PastEvent[] = [
     category: "Private",
     image:
       "https://images.unsplash.com/photo-1493707553966-283afac8c358?q=80&w=1200&auto=format&fit=crop",
+    music: {
+      track: "Velvet Hour",
+      artist: "Nocturne Quartet",
+      albumArt:
+        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400&auto=format&fit=crop",
+    },
   },
   {
     id: "pe-5",
@@ -159,6 +229,12 @@ export const pastEvents: PastEvent[] = [
     category: "Gala",
     image:
       "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1200&auto=format&fit=crop",
+    music: {
+      track: "Velvet Hour",
+      artist: "Nocturne Quartet",
+      albumArt:
+        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400&auto=format&fit=crop",
+    },
   },
   {
     id: "pe-6",
@@ -168,5 +244,11 @@ export const pastEvents: PastEvent[] = [
     category: "Private",
     image:
       "https://images.unsplash.com/photo-1529543544282-ea669407fca3?q=80&w=1200&auto=format&fit=crop",
+    music: {
+      track: "Velvet Hour",
+      artist: "Nocturne Quartet",
+      albumArt:
+        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400&auto=format&fit=crop",
+    },
   },
 ];

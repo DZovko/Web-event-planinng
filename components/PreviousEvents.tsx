@@ -3,13 +3,16 @@
 import { motion } from "framer-motion";
 import { Users } from "lucide-react";
 import { pastEvents } from "@/lib/data";
+import MusicBadge from "@/components/MusicBadge";
 
 export default function PreviousEvents() {
   return (
     <section id="past" className="py-24 md:py-32 bg-white">
       <div className="container-x mb-12">
         <span className="eyebrow">Portfolio</span>
-        <h2 className="font-display text-3xl md:text-4xl font-semibold text-ink mt-4">Previous Events</h2>
+        <h2 className="font-display text-3xl md:text-4xl font-semibold text-ink mt-4">
+          Previous Events
+        </h2>
       </div>
 
       <div className="container-x grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -34,10 +37,21 @@ export default function PreviousEvents() {
               <span className="text-[11px] tracking-widest2 uppercase text-gold-light">
                 {ev.category} · {ev.year}
               </span>
-              <h3 className="font-display text-xl text-white mt-2">{ev.title}</h3>
+              <h3 className="font-display text-xl text-white mt-2">
+                {ev.title}
+              </h3>
               <p className="flex items-center gap-1.5 text-white/70 text-sm mt-2">
                 <Users size={14} /> {ev.guests} guests
               </p>
+
+              <div className="mt-4">
+                <MusicBadge
+                  track={ev.music.track}
+                  artist={ev.music.artist}
+                  albumArt={ev.music.albumArt}
+                />
+              </div>
+
               <button className="mt-4 text-sm font-semibold text-white border-b border-gold pb-0.5 opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all">
                 Open Gallery →
               </button>

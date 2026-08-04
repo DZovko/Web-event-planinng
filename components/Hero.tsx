@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { CalendarDays, Clock, MapPin } from "lucide-react";
 import { currentEvent } from "@/lib/data";
+import MusicBadge from "@/components/MusicBadge";
 
 function useCountdown(target: string) {
   const [left, setLeft] = useState({ d: 0, h: 0, m: 0, s: 0 });
@@ -44,13 +45,19 @@ export default function Hero() {
   ];
 
   return (
-    <section id="top" className="relative min-h-[100svh] flex items-center overflow-hidden">
+    <section
+      id="top"
+      className="relative min-h-[100svh] flex items-center overflow-hidden"
+    >
       <div
         className="absolute inset-0 bg-cover bg-center scale-105"
         style={{ backgroundImage: `url(${currentEvent.image})` }}
         aria-hidden
       />
-      <div className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/55 to-ink/85" aria-hidden />
+      <div
+        className="absolute inset-0 bg-gradient-to-b from-ink/70 via-ink/55 to-ink/85"
+        aria-hidden
+      />
 
       {/* Rotated eyebrow tag, the signature "invitation" motif */}
       <div className="hidden lg:flex absolute right-10 top-1/2 -translate-y-1/2 items-center gap-4 z-10">
@@ -61,8 +68,16 @@ export default function Hero() {
       </div>
 
       <div className="container-x relative z-10 pt-24">
-        <motion.div initial="hidden" animate="show" className="max-w-2xl border-l border-gold/50 pl-6 md:pl-10">
-          <motion.span custom={0} variants={fadeUp} className="eyebrow text-gold-light">
+        <motion.div
+          initial="hidden"
+          animate="show"
+          className="max-w-2xl border-l border-gold/50 pl-6 md:pl-10"
+        >
+          <motion.span
+            custom={0}
+            variants={fadeUp}
+            className="eyebrow text-gold-light"
+          >
             Current Event
           </motion.span>
 
@@ -74,11 +89,19 @@ export default function Hero() {
             {currentEvent.title}
           </motion.h1>
 
-          <motion.p custom={2} variants={fadeUp} className="text-white/80 mt-5 text-base md:text-lg max-w-xl">
+          <motion.p
+            custom={2}
+            variants={fadeUp}
+            className="text-white/80 mt-5 text-base md:text-lg max-w-xl"
+          >
             {currentEvent.description}
           </motion.p>
 
-          <motion.div custom={3} variants={fadeUp} className="flex flex-wrap gap-x-8 gap-y-3 mt-7 text-white/90 text-sm">
+          <motion.div
+            custom={3}
+            variants={fadeUp}
+            className="flex flex-wrap gap-x-8 gap-y-3 mt-7 text-white/90 text-sm"
+          >
             <span className="flex items-center gap-2">
               <CalendarDays size={16} className="text-gold" />
               September 19, 2026
@@ -120,9 +143,24 @@ export default function Hero() {
               <div className="font-display text-3xl md:text-4xl text-white tabular-nums">
                 {String(u.value).padStart(2, "0")}
               </div>
-              <div className="text-[11px] tracking-widest2 uppercase text-white/50 mt-1">{u.label}</div>
+              <div className="text-[11px] tracking-widest2 uppercase text-white/50 mt-1">
+                {u.label}
+              </div>
             </div>
           ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.85, ease: "easeOut" }}
+          className="mt-8"
+        >
+          <MusicBadge
+            track={currentEvent.music.track}
+            artist={currentEvent.music.artist}
+            albumArt={currentEvent.music.albumArt}
+          />
         </motion.div>
       </div>
     </section>
