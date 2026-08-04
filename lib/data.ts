@@ -66,6 +66,15 @@ export const upcomingEvents: UpcomingEvent[] = [
     image:
       "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?q=80&w=1400&auto=format&fit=crop",
   },
+  {
+    id: "ue-5",
+    title: "Domagojev rođendan",
+    date: "Aug 08, 2026",
+    location: "Mlinska 151, Osijek",
+    description: "Ludi party",
+    image:
+      "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?q=80&w=1400&auto=format&fit=crop",
+  },
 ];
 
 export const galleryImages: { id: string; src: string; span?: string }[] = [

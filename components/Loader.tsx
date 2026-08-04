@@ -26,7 +26,7 @@ export default function Loader() {
             transition={{ duration: 1, ease: "easeOut" }}
             className="font-display text-sm uppercase text-gold"
           >
-            Solene Events
+            Saico
           </motion.span>
           <motion.div
             initial={{ scaleX: 0 }}

@@ -33,13 +33,32 @@ export default function Contact() {
           {submitted ? (
             <div className="py-16 text-center">
               <p className="font-display text-xl text-ink">Thank you.</p>
-              <p className="text-ink/60 mt-2">Your inquiry has been sent. We'll respond within 24 hours.</p>
+              <p className="text-ink/60 mt-2">
+                Your inquiry has been sent. We'll respond within 24 hours.
+              </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="grid sm:grid-cols-2 gap-x-8 gap-y-6">
-              <input required type="text" placeholder="Full name" className={inputClass} />
-              <input required type="email" placeholder="Email address" className={inputClass} />
-              <input type="tel" placeholder="Phone number" className={inputClass} />
+            <form
+              onSubmit={handleSubmit}
+              className="grid sm:grid-cols-2 gap-x-8 gap-y-6"
+            >
+              <input
+                required
+                type="text"
+                placeholder="Full name"
+                className={inputClass}
+              />
+              <input
+                required
+                type="email"
+                placeholder="Email address"
+                className={inputClass}
+              />
+              <input
+                type="tel"
+                placeholder="Phone number"
+                className={inputClass}
+              />
               <select required defaultValue="" className={inputClass}>
                 <option value="" disabled>
                   Event type
@@ -51,7 +70,12 @@ export default function Contact() {
                 <option>Other</option>
               </select>
               <input type="date" className={inputClass} />
-              <input type="number" min={1} placeholder="Number of guests" className={inputClass} />
+              <input
+                type="number"
+                min={1}
+                placeholder="Number of guests"
+                className={inputClass}
+              />
               <textarea
                 placeholder="Tell us about your event"
                 rows={4}
@@ -75,21 +99,20 @@ export default function Contact() {
           className="lg:col-span-2 flex flex-col gap-8"
         >
           <div className="bg-ink text-white p-8">
-            <h3 className="font-display text-lg mb-6">Solene Events</h3>
+            <h3 className="font-display text-lg mb-6">Saico Events</h3>
             <ul className="space-y-4 text-sm text-white/80">
               <li className="flex items-center gap-3">
-                <MapPin size={16} className="text-gold shrink-0" /> Ilica 42, 10000 Zagreb, Croatia
+                <Phone size={16} className="text-gold shrink-0" /> +385 1 234
+                5678
               </li>
               <li className="flex items-center gap-3">
-                <Phone size={16} className="text-gold shrink-0" /> +385 1 234 5678
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail size={16} className="text-gold shrink-0" /> hello@soleneevents.com
+                <Mail size={16} className="text-gold shrink-0" />{" "}
+                hello@saico.com
               </li>
             </ul>
             <div className="hairline-solid my-6" />
             <p className="text-white/60 text-sm leading-relaxed">
-              Studio hours: Monday–Friday, 9:00–18:00. Site visits and consultations by appointment.
+              Monday–Friday, 9:00–18:00.
             </p>
           </div>
 

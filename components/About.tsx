@@ -23,10 +23,13 @@ export default function About() {
             <div className="flex gap-5">
               <Compass className="text-gold shrink-0 mt-1" size={22} />
               <div>
-                <h3 className="font-display text-lg font-medium text-ink">Our Vision</h3>
+                <h3 className="font-display text-lg font-medium text-ink">
+                  Our Vision
+                </h3>
                 <p className="text-ink/65 mt-2 leading-relaxed">
-                  To make restraint feel luxurious. We believe the best events are edited,
-                  not decorated, every detail earning its place in the room.
+                  To make restraint feel luxurious. We believe the best events
+                  are edited, not decorated, every detail earning its place in
+                  the room.
                 </p>
               </div>
             </div>
@@ -36,10 +39,13 @@ export default function About() {
             <div className="flex gap-5">
               <Sparkles className="text-gold shrink-0 mt-1" size={22} />
               <div>
-                <h3 className="font-display text-lg font-medium text-ink">Our Mission</h3>
+                <h3 className="font-display text-lg font-medium text-ink">
+                  Our Mission
+                </h3>
                 <p className="text-ink/65 mt-2 leading-relaxed">
-                  To carry the full weight of production, budget, vendors, timing, so our
-                  clients experience their own event as a guest, not a manager.
+                  To carry the full weight of production, budget, vendors,
+                  timing, so our clients experience their own event as a guest,
+                  not a manager.
                 </p>
               </div>
             </div>
@@ -56,14 +62,16 @@ export default function About() {
           <div className="relative aspect-[4/5] overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=1400&auto=format&fit=crop"
-              alt="Table setting at a Solene Events production"
+              alt="Table setting at a Saico Events production"
               className="h-full w-full object-cover"
               loading="lazy"
             />
           </div>
           <div className="absolute -bottom-8 -left-8 hidden md:block bg-ink text-white px-8 py-6">
             <div className="font-display text-3xl text-gold">120+</div>
-            <div className="text-xs tracking-widest2 uppercase text-white/70 mt-1">Events Produced</div>
+            <div className="text-xs tracking-widest2 uppercase text-white/70 mt-1">
+              Events Produced
+            </div>
           </div>
         </motion.div>
       </div>

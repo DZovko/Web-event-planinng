@@ -42,7 +42,7 @@ export default function Navbar() {
             solid ? "text-ink" : "text-white"
           }`}
         >
-          Solene
+          Saico
         </a>
 
         <nav className="hidden lg:flex items-center gap-10">
