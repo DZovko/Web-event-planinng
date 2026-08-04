@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-cream text-ink font-body antialiased;
+}
+
+::selection {
+  background-color: #D4AF37;
+  color: #1F2937;
+}
+
+/* Thin gold hairline divider used as the recurring structural motif */
+.hairline {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+}
+
+.hairline-solid {
+  height: 1px;
+  background-color: rgba(212, 175, 55, 0.35);
+}
+
+.eyebrow {
+  @apply font-display text-xs tracking-widest2 uppercase text-gold-dark;
+}
+
+.container-x {
+  @apply max-w-8xl mx-auto px-6 md:px-10 lg:px-16;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F8F9FA;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 8px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus visibility for accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 2px solid #D4AF37;
+  outline-offset: 3px;
+}
+
+.card-frame {
+  border: 1px solid rgba(31, 41, 55, 0.08);
+}
