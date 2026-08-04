@@ -19,11 +19,21 @@ export type PastEvent = {
   guests: number;
   category: string;
   image: string;
+  gallery: string[];
   music: {
     track: string;
     artist: string;
     albumArt: string;
   };
+};
+
+export type Testimonial = {
+  id: string;
+  name: string;
+  role: string;
+  rating: number;
+  review: string;
+  photo: string;
 };
 
 export const currentEvent = {
@@ -85,8 +95,8 @@ export const upcomingEvents: UpcomingEvent[] = [
     image:
       "https://images.unsplash.com/photo-1478146059778-26028b07395a?q=80&w=1400&auto=format&fit=crop",
     music: {
-      track: "Coastal Table",
-      artist: "Marin Ivić Trio",
+      track: "Foundry Lights",
+      artist: "Ambient Works",
       albumArt:
         "https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?q=80&w=400&auto=format&fit=crop",
     },
@@ -95,68 +105,16 @@ export const upcomingEvents: UpcomingEvent[] = [
     id: "ue-4",
     title: "New Year, Reimagined",
     date: "Dec 31, 2026",
-    location: "Rooftop Saico, Zagreb",
+    location: "Rooftop Solene, Zagreb",
     description: "A midnight celebration overlooking the city skyline.",
     image:
       "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?q=80&w=1400&auto=format&fit=crop",
     music: {
-      track: "Coastal Table",
-      artist: "Marin Ivić Trio",
+      track: "Skyline Midnight",
+      artist: "Rooftop Session",
       albumArt:
         "https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?q=80&w=400&auto=format&fit=crop",
     },
-  },
-  {
-    id: "ue-5",
-    title: "Domagojev rođendan",
-    date: "Aug 08, 2026",
-    location: "Mlinska 151, Osijek",
-    description: "Ludi party",
-    image: "slika_kuce.avif",
-    music: {
-      track: "Boston",
-      artist: "venok",
-      albumArt:
-        "https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?q=80&w=400&auto=format&fit=crop",
-    },
-  },
-];
-
-export const galleryImages: { id: string; src: string; span?: string }[] = [
-  {
-    id: "g1",
-    src: "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1200&auto=format&fit=crop",
-    span: "row-span-2",
-  },
-  {
-    id: "g2",
-    src: "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    id: "g3",
-    src: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    id: "g4",
-    src: "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1200&auto=format&fit=crop",
-    span: "row-span-2",
-  },
-  {
-    id: "g5",
-    src: "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    id: "g6",
-    src: "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    id: "g7",
-    src: "https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    id: "g8",
-    src: "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=1200&auto=format&fit=crop",
-    span: "row-span-2",
   },
 ];
 
@@ -169,9 +127,15 @@ export const pastEvents: PastEvent[] = [
     category: "Gala",
     image:
       "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1200&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1478146059778-26028b07395a?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1400&auto=format&fit=crop",
+    ],
     music: {
-      track: "Velvet Hour",
-      artist: "Nocturne Quartet",
+      track: "Desert Wind",
+      artist: "Kasbah Ensemble",
       albumArt:
         "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400&auto=format&fit=crop",
     },
@@ -184,11 +148,17 @@ export const pastEvents: PastEvent[] = [
     category: "Wedding",
     image:
       "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?q=80&w=1400&auto=format&fit=crop",
+    ],
     music: {
-      track: "Velvet Hour",
-      artist: "Nocturne Quartet",
+      track: "First Dance",
+      artist: "Lior & Strings",
       albumArt:
-        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?q=80&w=400&auto=format&fit=crop",
     },
   },
   {
@@ -199,9 +169,15 @@ export const pastEvents: PastEvent[] = [
     category: "Corporate",
     image:
       "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1505373877841-8d25f7d46678?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1527529482837-4698179dc6ce?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=1400&auto=format&fit=crop",
+    ],
     music: {
-      track: "Velvet Hour",
-      artist: "Nocturne Quartet",
+      track: "Momentum",
+      artist: "Analog Circuit",
       albumArt:
         "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400&auto=format&fit=crop",
     },
@@ -214,11 +190,17 @@ export const pastEvents: PastEvent[] = [
     category: "Private",
     image:
       "https://images.unsplash.com/photo-1493707553966-283afac8c358?q=80&w=1200&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1493707553966-283afac8c358?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1400&auto=format&fit=crop",
+    ],
     music: {
-      track: "Velvet Hour",
-      artist: "Nocturne Quartet",
+      track: "Warm Static",
+      artist: "Rooftop Session",
       albumArt:
-        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?q=80&w=400&auto=format&fit=crop",
     },
   },
   {
@@ -229,6 +211,12 @@ export const pastEvents: PastEvent[] = [
     category: "Gala",
     image:
       "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1200&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1478146059778-26028b07395a?q=80&w=1400&auto=format&fit=crop",
+    ],
     music: {
       track: "Velvet Hour",
       artist: "Nocturne Quartet",
@@ -244,11 +232,50 @@ export const pastEvents: PastEvent[] = [
     category: "Private",
     image:
       "https://images.unsplash.com/photo-1529543544282-ea669407fca3?q=80&w=1200&auto=format&fit=crop",
+    gallery: [
+      "https://images.unsplash.com/photo-1529543544282-ea669407fca3?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1522673607200-164d1b6ce486?q=80&w=1400&auto=format&fit=crop",
+    ],
     music: {
-      track: "Velvet Hour",
-      artist: "Nocturne Quartet",
+      track: "Harvest Moon",
+      artist: "Marin Ivić Trio",
       albumArt:
-        "https://images.unsplash.com/photo-1470225620780-dba8ba36b745?q=80&w=400&auto=format&fit=crop",
+        "https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?q=80&w=400&auto=format&fit=crop",
     },
+  },
+];
+
+export const testimonials: Testimonial[] = [
+  {
+    id: "t1",
+    name: "Elena Petrović",
+    role: "Bride, The Orchard Wedding",
+    rating: 5,
+    review:
+      "Every detail felt considered, from the seating chart to the last song of the night. Our guests are still talking about it.",
+    photo:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop",
+  },
+  {
+    id: "t2",
+    name: "Marko Babić",
+    role: "CEO, Founders Summit",
+    rating: 5,
+    review:
+      "They ran a 340-guest conference like clockwork. Zero surprises, exceptional taste, and a team that anticipated problems before we saw them.",
+    photo:
+      "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop",
+  },
+  {
+    id: "t3",
+    name: "Ana Kovačević",
+    role: "Host, Solstice Rooftop",
+    rating: 5,
+    review:
+      "Understated, elegant, and precisely on brand. I've worked with three other planners before, none came close.",
+    photo:
+      "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop",
   },
 ];

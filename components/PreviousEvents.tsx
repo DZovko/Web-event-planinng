@@ -43,7 +43,6 @@ export default function PreviousEvents() {
               <p className="flex items-center gap-1.5 text-white/70 text-sm mt-2">
                 <Users size={14} /> {ev.guests} guests
               </p>
-
               <div className="mt-4 inline-flex bg-black/30 backdrop-blur-sm rounded-lg px-3 py-2">
                 <MusicBadge
                   track={ev.music.track}
@@ -52,10 +51,14 @@ export default function PreviousEvents() {
                   variant="dark"
                 />
               </div>
-
-              <button className="mt-4 text-sm font-semibold text-white border-b border-gold pb-0.5 opacity-0 -translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all">
-                Open Gallery →
-              </button>
+              <div className="flex justify-end mt-4">
+                <a
+                  href="#gallery"
+                  className="inline-block text-sm font-semibold text-white border-b border-gold pb-0.5 opacity-0 -translate-y-1 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all"
+                >
+                  Open Gallery →
+                </a>
+              </div>
             </div>
           </motion.div>
         ))}

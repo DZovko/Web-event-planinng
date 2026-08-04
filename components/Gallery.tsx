@@ -2,96 +2,99 @@
 
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { X, ChevronLeft, ChevronRight } from "lucide-react";
-import { galleryImages } from "@/lib/data";
+import { X } from "lucide-react";
+import { pastEvents } from "@/lib/data";
 
 export default function Gallery() {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
-
-  const close = () => setActiveIndex(null);
-  const next = () =>
-    setActiveIndex((i) => (i === null ? null : (i + 1) % galleryImages.length));
-  const prev = () =>
-    setActiveIndex((i) =>
-      i === null ? null : (i - 1 + galleryImages.length) % galleryImages.length
-    );
+  const [activeEvent, setActiveEvent] = useState<string | null>(null);
+  const event = pastEvents.find((e) => e.id === activeEvent) ?? null;
 
   return (
     <section id="gallery" className="py-24 md:py-32 bg-paper">
       <div className="container-x mb-12">
         <span className="eyebrow">Moments</span>
-        <h2 className="font-display text-3xl md:text-4xl font-semibold text-ink mt-4">Gallery</h2>
+        <h2 className="font-display text-3xl md:text-4xl font-semibold text-ink mt-4">
+          Gallery
+        </h2>
       </div>
 
-      <div className="container-x grid grid-cols-2 md:grid-cols-4 auto-rows-[160px] md:auto-rows-[200px] gap-3">
-        {galleryImages.map((img, i) => (
+      <div className="container-x grid grid-cols-2 md:grid-cols-3 gap-3">
+        {pastEvents.map((ev, i) => (
           <motion.button
-            key={img.id}
-            onClick={() => setActiveIndex(i)}
+            key={ev.id}
+            onClick={() => setActiveEvent(ev.id)}
             initial={{ opacity: 0, scale: 0.96 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.5, delay: i * 0.05 }}
-            className={`relative overflow-hidden group ${img.span ?? ""}`}
-            aria-label="Open image in lightbox"
+            transition={{ duration: 0.5, delay: i * 0.06 }}
+            className="relative overflow-hidden aspect-[4/5] group text-left"
+            aria-label={`Open ${ev.title} gallery`}
           >
             <img
-              src={img.src}
-              alt=""
+              src={ev.image}
+              alt={ev.title}
               className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
               loading="lazy"
             />
-            <div className="absolute inset-0 bg-ink/0 group-hover:bg-ink/20 transition-colors" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/10 to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 p-5">
+              <span className="text-[11px] tracking-widest2 uppercase text-gold-light">
+                {ev.year}
+              </span>
+              <h3 className="font-display text-lg text-white mt-1">
+                {ev.title}
+              </h3>
+            </div>
           </motion.button>
         ))}
       </div>
 
       <AnimatePresence>
-        {activeIndex !== null && (
+        {event && (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[90] bg-ink/95 flex items-center justify-center px-4"
-            onClick={close}
+            className="fixed inset-0 z-[90] bg-ink/95 flex flex-col"
+            onClick={() => setActiveEvent(null)}
           >
-            <button
-              aria-label="Close lightbox"
-              onClick={close}
-              className="absolute top-6 right-6 text-white/80 hover:text-gold"
-            >
-              <X size={28} />
-            </button>
-            <button
-              aria-label="Previous image"
-              onClick={(e) => {
-                e.stopPropagation();
-                prev();
-              }}
-              className="absolute left-4 md:left-10 text-white/70 hover:text-gold"
-            >
-              <ChevronLeft size={34} />
-            </button>
-            <motion.img
-              key={activeIndex}
-              initial={{ opacity: 0, scale: 0.95 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.35 }}
-              src={galleryImages[activeIndex].src}
-              alt=""
+            <div
+              className="flex items-center justify-between px-6 md:px-10 pt-8 pb-4"
               onClick={(e) => e.stopPropagation()}
-              className="max-h-[82vh] max-w-[90vw] object-contain"
-            />
-            <button
-              aria-label="Next image"
-              onClick={(e) => {
-                e.stopPropagation();
-                next();
-              }}
-              className="absolute right-4 md:right-10 text-white/70 hover:text-gold"
             >
-              <ChevronRight size={34} />
-            </button>
+              <div>
+                <span className="text-[11px] tracking-widest2 uppercase text-gold-light">
+                  {event.year}
+                </span>
+                <h3 className="font-display text-2xl text-white mt-1">
+                  {event.title}
+                </h3>
+              </div>
+              <button
+                aria-label="Close gallery"
+                onClick={() => setActiveEvent(null)}
+                className="text-white/80 hover:text-gold"
+              >
+                <X size={28} />
+              </button>
+            </div>
+
+            <div
+              className="flex-1 flex items-center gap-4 overflow-x-auto px-6 md:px-10 pb-10 snap-x snap-mandatory scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+              onClick={(e) => e.stopPropagation()}
+            >
+              {event.gallery.map((src, i) => (
+                <motion.img
+                  key={src}
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: i * 0.06 }}
+                  src={src}
+                  alt={`${event.title} photo ${i + 1}`}
+                  className="h-full max-h-[70vh] w-auto shrink-0 snap-center object-cover"
+                />
+              ))}
+            </div>
           </motion.div>
         )}
       </AnimatePresence>
