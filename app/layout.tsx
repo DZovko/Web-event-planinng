@@ -16,10 +16,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Solene Events — Refined Event Planning",
+  title: "Saico Events — Refined Event Planning",
   description:
-    "Solene Events designs and produces galas, weddings, and private celebrations across Croatia, with an eye for restraint and detail.",
-  keywords: ["event planning", "wedding planner", "corporate events", "Croatia", "gala"],
+    "Saico Events designs and produces galas, weddings, and private celebrations across Croatia, with an eye for restraint and detail.",
+  keywords: [
+    "event planning",
+    "wedding planner",
+    "corporate events",
+    "Croatia",
+    "gala",
+  ],
   openGraph: {
     title: "Solene Events — Refined Event Planning",
     description:
