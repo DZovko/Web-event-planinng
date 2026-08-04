@@ -48,56 +48,6 @@ export default function Gallery() {
           </motion.button>
         ))}
       </div>
-
-      <AnimatePresence>
-        {event && (
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[90] bg-ink/95 flex flex-col"
-            onClick={() => setActiveEvent(null)}
-          >
-            <div
-              className="flex items-center justify-between px-6 md:px-10 pt-8 pb-4"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div>
-                <span className="text-[11px] tracking-widest2 uppercase text-gold-light">
-                  {event.year}
-                </span>
-                <h3 className="font-display text-2xl text-white mt-1">
-                  {event.title}
-                </h3>
-              </div>
-              <button
-                aria-label="Close gallery"
-                onClick={() => setActiveEvent(null)}
-                className="text-white/80 hover:text-gold"
-              >
-                <X size={28} />
-              </button>
-            </div>
-
-            <div
-              className="flex-1 flex items-center gap-4 overflow-x-auto px-6 md:px-10 pb-10 snap-x snap-mandatory scroll-smooth [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
-              onClick={(e) => e.stopPropagation()}
-            >
-              {event.gallery.map((src, i) => (
-                <motion.img
-                  key={src}
-                  initial={{ opacity: 0, x: 30 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.4, delay: i * 0.06 }}
-                  src={src}
-                  alt={`${event.title} photo ${i + 1}`}
-                  className="h-full max-h-[70vh] w-auto shrink-0 snap-center object-cover"
-                />
-              ))}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
     </section>
   );
 }

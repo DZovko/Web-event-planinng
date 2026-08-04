@@ -246,36 +246,3 @@ export const pastEvents: PastEvent[] = [
     },
   },
 ];
-
-export const testimonials: Testimonial[] = [
-  {
-    id: "t1",
-    name: "Elena Petrović",
-    role: "Bride, The Orchard Wedding",
-    rating: 5,
-    review:
-      "Every detail felt considered, from the seating chart to the last song of the night. Our guests are still talking about it.",
-    photo:
-      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop",
-  },
-  {
-    id: "t2",
-    name: "Marko Babić",
-    role: "CEO, Founders Summit",
-    rating: 5,
-    review:
-      "They ran a 340-guest conference like clockwork. Zero surprises, exceptional taste, and a team that anticipated problems before we saw them.",
-    photo:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=400&auto=format&fit=crop",
-  },
-  {
-    id: "t3",
-    name: "Ana Kovačević",
-    role: "Host, Solstice Rooftop",
-    rating: 5,
-    review:
-      "Understated, elegant, and precisely on brand. I've worked with three other planners before, none came close.",
-    photo:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=400&auto=format&fit=crop",
-  },
-];

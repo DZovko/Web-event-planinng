@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import UpcomingEvents from "@/components/UpcomingEvents";
-import Gallery from "@/components/Gallery";
+//import Gallery from "@/components/Gallery";
 import PreviousEvents from "@/components/PreviousEvents";
 
 import Contact from "@/components/Contact";
@@ -19,9 +19,7 @@ export default function Home() {
         <Hero />
         <About />
         <UpcomingEvents />
-        <Gallery />
         <PreviousEvents />
-
         <Contact />
       </main>
       <Footer />

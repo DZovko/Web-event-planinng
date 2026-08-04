@@ -14,7 +14,7 @@ export default function UpcomingEvents() {
   };
 
   return (
-    <section id="events" className="py-24 md:py-32 bg-white">
+    <section id="events" className="py-8 md:py-16 bg-white">
       <div className="container-x flex items-end justify-between mb-12">
         <div>
           <span className="eyebrow">What's Ahead</span>
