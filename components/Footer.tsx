@@ -1,10 +1,10 @@
 import { Instagram, Facebook, Linkedin } from "lucide-react";
 
 const LINKS = [
-  { href: "#about", label: "About" },
-  { href: "#events", label: "Events" },
-  { href: "#gallery", label: "Gallery" },
-  { href: "#contact", label: "Contact" },
+  { href: "#about", label: "O nama" },
+  { href: "#events", label: "Eventi" },
+  { href: "#past", label: "Prijašnji radovi" },
+  { href: "#contact", label: "Kontakt" },
 ];
 
 export default function Footer() {
@@ -16,14 +16,14 @@ export default function Footer() {
             Saico
           </span>
           <p className="text-white/50 text-sm mt-4 leading-relaxed max-w-xs">
-            Refined event planning and production for galas, weddings, and
-            private celebrations across Croatia.
+            Profinjeno planiranje i produkcija eventa, gala večeri, vjenčanja i
+            privatnih proslava diljem Hrvatske.
           </p>
         </div>
 
         <div>
           <h4 className="text-xs tracking-widest2 uppercase text-gold mb-4">
-            Navigate
+            Navigacija
           </h4>
           <ul className="space-y-2.5">
             {LINKS.map((l) => (
@@ -41,17 +41,17 @@ export default function Footer() {
 
         <div>
           <h4 className="text-xs tracking-widest2 uppercase text-gold mb-4">
-            Contact
+            Kontakt
           </h4>
           <ul className="space-y-2.5 text-white/70 text-sm">
             <li>+385 1 234 5678</li>
-            <li>hello@saico.com</li>
+            <li>hello@saicoevents.com</li>
           </ul>
         </div>
 
         <div>
           <h4 className="text-xs tracking-widest2 uppercase text-gold mb-4">
-            Follow
+            Pratite nas
           </h4>
           <div className="flex gap-4">
             <a
@@ -83,9 +83,9 @@ export default function Footer() {
 
       <div className="container-x pt-6 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-white/40">
         <span>
-          © {new Date().getFullYear()} Saico Events. All rights reserved.
+          © {new Date().getFullYear()} Saico Events. Sva prava pridržana.
         </span>
-        <span>Designed with restraint.</span>
+        <span>Dizajnirano sa suzdržanošću.</span>
       </div>
     </footer>
   );

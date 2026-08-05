@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const LINKS = [
-  { href: "#about", label: "About" },
-  { href: "#events", label: "Events" },
+  { href: "#about", label: "O Nama" },
+  { href: "#events", label: "Eventi" },
 
-  { href: "#past", label: "Past Work" },
+  { href: "#past", label: "Naš Rad" },
 
-  { href: "#contact", label: "Contact" },
+  { href: "#contact", label: "Kontakt" },
 ];
 
 export default function Navbar() {
@@ -61,7 +61,7 @@ export default function Navbar() {
             href="#contact"
             className="border border-gold px-5 py-2 text-sm font-medium tracking-wide text-gold transition-colors hover:bg-gold hover:text-ink"
           >
-            Book Now
+            Zakažite sada
           </a>
         </nav>
 
@@ -97,7 +97,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               className="mt-2 w-fit border border-gold px-5 py-2 text-sm font-medium text-gold"
             >
-              Book Now
+              Zakažite sada
             </a>
           </div>
         </motion.nav>

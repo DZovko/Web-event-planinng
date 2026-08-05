@@ -17,9 +17,9 @@ export default function UpcomingEvents() {
     <section id="events" className="py-8 md:py-16 bg-white">
       <div className="container-x flex items-end justify-between mb-12">
         <div>
-          <span className="eyebrow">What's Ahead</span>
+          <span className="eyebrow">Uskoro</span>
           <h2 className="font-display text-3xl md:text-4xl font-semibold text-ink mt-4">
-            Upcoming Events
+            Nadolazeći eventi
           </h2>
         </div>
         <div className="hidden sm:flex gap-3">

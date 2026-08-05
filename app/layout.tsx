@@ -16,20 +16,20 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Saico Events — Refined Event Planning",
+  title: "Solene Events — Profinjeno planiranje eventa",
   description:
-    "Saico Events designs and produces galas, weddings, and private celebrations across Croatia, with an eye for restraint and detail.",
+    "Solene Events osmišljava i producira gala večeri, vjenčanja i privatne proslave diljem Hrvatske, s okom za suzdržanost i detalje.",
   keywords: [
-    "event planning",
-    "wedding planner",
-    "corporate events",
-    "Croatia",
-    "gala",
+    "planiranje eventa",
+    "organizacija vjenčanja",
+    "korporativni eventi",
+    "Hrvatska",
+    "gala večer",
   ],
   openGraph: {
-    title: "Solene Events — Refined Event Planning",
+    title: "Solene Events — Profinjeno planiranje eventa",
     description:
-      "Galas, weddings, and private celebrations, designed with restraint and precision.",
+      "Gala večeri, vjenčanja i privatne proslave, osmišljene sa suzdržanošću i preciznošću.",
     type: "website",
   },
 };
@@ -40,7 +40,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${poppins.variable} ${inter.variable}`}>
+    <html lang="hr" className={`${poppins.variable} ${inter.variable}`}>
       <body>{children}</body>
     </html>
   );

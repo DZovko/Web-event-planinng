@@ -25,16 +25,16 @@ export default function Contact() {
           transition={{ duration: 0.6 }}
           className="lg:col-span-3 bg-white p-8 md:p-12 card-frame"
         >
-          <span className="eyebrow">Get in Touch</span>
+          <span className="eyebrow">Kontaktirajte nas</span>
           <h2 className="font-display text-3xl font-semibold text-ink mt-4 mb-8">
-            Start Planning Your Event
+            Započnite planiranje vašeg eventa
           </h2>
 
           {submitted ? (
             <div className="py-16 text-center">
-              <p className="font-display text-xl text-ink">Thank you.</p>
+              <p className="font-display text-xl text-ink">Hvala vam.</p>
               <p className="text-ink/60 mt-2">
-                Your inquiry has been sent. We'll respond within 24 hours.
+                Vaš upit je poslan. Odgovorit ćemo u roku od 24 sata.
               </p>
             </div>
           ) : (
@@ -45,39 +45,39 @@ export default function Contact() {
               <input
                 required
                 type="text"
-                placeholder="Full name"
+                placeholder="Ime i prezime"
                 className={inputClass}
               />
               <input
                 required
                 type="email"
-                placeholder="Email address"
+                placeholder="Email adresa"
                 className={inputClass}
               />
               <input
                 type="tel"
-                placeholder="Phone number"
+                placeholder="Broj telefona"
                 className={inputClass}
               />
               <select required defaultValue="" className={inputClass}>
                 <option value="" disabled>
-                  Event type
+                  Vrsta eventa
                 </option>
-                <option>Wedding</option>
-                <option>Corporate</option>
-                <option>Private Celebration</option>
+                <option>Vjenčanje</option>
+                <option>Korporativno</option>
+                <option>Privatna proslava</option>
                 <option>Gala</option>
-                <option>Other</option>
+                <option>Ostalo</option>
               </select>
               <input type="date" className={inputClass} />
               <input
                 type="number"
                 min={1}
-                placeholder="Number of guests"
+                placeholder="Broj gostiju"
                 className={inputClass}
               />
               <textarea
-                placeholder="Tell us about your event"
+                placeholder="Recite nam nešto o vašem eventu"
                 rows={4}
                 className={`${inputClass} sm:col-span-2 resize-none`}
               />
@@ -85,7 +85,7 @@ export default function Contact() {
                 type="submit"
                 className="sm:col-span-2 mt-2 bg-ink text-white py-4 text-sm font-semibold tracking-widest2 uppercase hover:bg-gold hover:text-ink transition-colors"
               >
-                Send Inquiry
+                Pošalji upit
               </button>
             </form>
           )}
@@ -99,7 +99,7 @@ export default function Contact() {
           className="lg:col-span-2 flex flex-col gap-8"
         >
           <div className="bg-ink text-white p-8">
-            <h3 className="font-display text-lg mb-6">Saico Events</h3>
+            <h3 className="font-display text-lg mb-6">Solene Events</h3>
             <ul className="space-y-4 text-sm text-white/80">
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-gold shrink-0" /> +385 1 234
@@ -107,18 +107,19 @@ export default function Contact() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-gold shrink-0" />{" "}
-                hello@saico.com
+                hello@saicoevents.com
               </li>
             </ul>
             <div className="hairline-solid my-6" />
             <p className="text-white/60 text-sm leading-relaxed">
-              Monday–Friday, 9:00–18:00.
+              Radno vrijeme studija: ponedjeljak–petak, 9:00–18:00. Obilasci
+              lokacija i konzultacije po dogovoru.
             </p>
           </div>
 
           <div className="flex-1 min-h-[220px] overflow-hidden card-frame">
             <iframe
-              title="Saico Events studio location"
+              title="Lokacija studija Saico Events"
               src="https://www.google.com/maps?q=Ilica%2042%2C%20Zagreb&output=embed"
               className="h-full w-full min-h-[220px] grayscale contrast-125"
               loading="lazy"

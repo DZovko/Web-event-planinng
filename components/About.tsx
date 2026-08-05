@@ -13,10 +13,10 @@ export default function About() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
-          <span className="eyebrow">About Us</span>
+          <span className="eyebrow">O nama</span>
           <h2 className="font-display text-3xl md:text-4xl font-semibold text-ink mt-4 leading-tight">
-            We produce evenings people
-            <br className="hidden md:block" /> still talk about years later.
+            Stvaramo večeri o kojima se
+            <br className="hidden md:block" /> priča i godinama poslije.
           </h2>
 
           <div className="mt-10 space-y-8">
@@ -24,12 +24,12 @@ export default function About() {
               <Compass className="text-gold shrink-0 mt-1" size={22} />
               <div>
                 <h3 className="font-display text-lg font-medium text-ink">
-                  Our Vision
+                  Naša vizija
                 </h3>
                 <p className="text-ink/65 mt-2 leading-relaxed">
-                  To make restraint feel luxurious. We believe the best events
-                  are edited, not decorated, every detail earning its place in
-                  the room.
+                  Suzdržanost kao oblik luksuza. Vjerujemo da su najbolji eventi
+                  uređeni, a ne dekorirani, svaki detalj zaslužuje svoje mjesto
+                  u prostoru.
                 </p>
               </div>
             </div>
@@ -40,12 +40,12 @@ export default function About() {
               <Sparkles className="text-gold shrink-0 mt-1" size={22} />
               <div>
                 <h3 className="font-display text-lg font-medium text-ink">
-                  Our Mission
+                  Naša misija
                 </h3>
                 <p className="text-ink/65 mt-2 leading-relaxed">
-                  To carry the full weight of production, budget, vendors,
-                  timing, so our clients experience their own event as a guest,
-                  not a manager.
+                  Preuzimamo cjelokupnu težinu produkcije, budžeta, dobavljača i
+                  rasporeda, kako bi naši klijenti doživjeli vlastiti event kao
+                  gost, a ne kao organizator.
                 </p>
               </div>
             </div>
@@ -62,7 +62,7 @@ export default function About() {
           <div className="relative aspect-[4/5] overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=1400&auto=format&fit=crop"
-              alt="Table setting at a Saico Events production"
+              alt="Postava stola na produkciji Solene Events"
               className="h-full w-full object-cover"
               loading="lazy"
             />
@@ -70,7 +70,7 @@ export default function About() {
           <div className="absolute -bottom-8 -left-8 hidden md:block bg-ink text-white px-8 py-6">
             <div className="font-display text-3xl text-gold">120+</div>
             <div className="text-xs tracking-widest2 uppercase text-white/70 mt-1">
-              Events Produced
+              Organiziranih eventova
             </div>
           </div>
         </motion.div>

@@ -37,11 +37,11 @@ export type Testimonial = {
 };
 
 export const currentEvent = {
-  title: "The Gilded Evening",
+  title: "Pozlaćena večer",
   description:
-    "An intimate black-tie gathering celebrating a decade of unforgettable evenings, held under the restored glass atrium of the Meridian Hall.",
+    "Intimno gala okupljanje u stilu black-tie povodom desete godišnjice nezaboravnih večeri, u obnovljenom staklenom atriju Meridian Hall-a.",
   date: "2026-09-19T19:00:00",
-  time: "7:00 PM",
+  time: "19:00",
   location: "Meridian Hall, Zagreb",
   image:
     "https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=2400&auto=format&fit=crop",
@@ -56,11 +56,11 @@ export const currentEvent = {
 export const upcomingEvents: UpcomingEvent[] = [
   {
     id: "ue-1",
-    title: "The Gilded Evening",
-    date: "Sep 19, 2026",
+    title: "Pozlaćena večer",
+    date: "19. ruj 2026.",
     location: "Meridian Hall, Zagreb",
     description:
-      "A black-tie anniversary gala beneath a restored glass atrium.",
+      "Black-tie gala povodom godišnjice ispod obnovljenog staklenog atrija.",
     image:
       "https://images.unsplash.com/photo-1519225421980-715cb0215aed?q=80&w=1400&auto=format&fit=crop",
     music: {
@@ -72,10 +72,10 @@ export const upcomingEvents: UpcomingEvent[] = [
   },
   {
     id: "ue-2",
-    title: "Vintner's Table",
-    date: "Oct 04, 2026",
+    title: "Vinarski stol",
+    date: "04. lis 2026.",
     location: "Villa Dorena, Split",
-    description: "A seated harvest dinner paired with six coastal vineyards.",
+    description: "Sjedeća berbenska večera uz šest vinarija s obale.",
     image:
       "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1400&auto=format&fit=crop",
     music: {
@@ -87,11 +87,10 @@ export const upcomingEvents: UpcomingEvent[] = [
   },
   {
     id: "ue-3",
-    title: "Winter Atelier",
-    date: "Dec 12, 2026",
-    location: "The Old Foundry, Osijek",
-    description:
-      "A curated design showcase and cocktail evening for 200 guests.",
+    title: "Zimski atelje",
+    date: "12. pro 2026.",
+    location: "Stara ljevaonica, Osijek",
+    description: "Kuratorirana izložba dizajna i koktel večer za 200 gostiju.",
     image:
       "https://images.unsplash.com/photo-1478146059778-26028b07395a?q=80&w=1400&auto=format&fit=crop",
     music: {
@@ -103,10 +102,10 @@ export const upcomingEvents: UpcomingEvent[] = [
   },
   {
     id: "ue-4",
-    title: "New Year, Reimagined",
-    date: "Dec 31, 2026",
+    title: "Nova godina, iznova",
+    date: "31. pro 2026.",
     location: "Rooftop Solene, Zagreb",
-    description: "A midnight celebration overlooking the city skyline.",
+    description: "Ponoćna proslava s pogledom na siluetu grada.",
     image:
       "https://images.unsplash.com/photo-1467810563316-b5476525c0f9?q=80&w=1400&auto=format&fit=crop",
     music: {
@@ -121,7 +120,7 @@ export const upcomingEvents: UpcomingEvent[] = [
 export const pastEvents: PastEvent[] = [
   {
     id: "pe-1",
-    title: "Midnight in Marrakech",
+    title: "Ponoć u Marakešu",
     year: "2025",
     guests: 180,
     category: "Gala",
@@ -142,10 +141,10 @@ export const pastEvents: PastEvent[] = [
   },
   {
     id: "pe-2",
-    title: "The Orchard Wedding",
+    title: "Vjenčanje u voćnjaku",
     year: "2025",
     guests: 120,
-    category: "Wedding",
+    category: "Vjenčanje",
     image:
       "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1200&auto=format&fit=crop",
     gallery: [
@@ -163,10 +162,10 @@ export const pastEvents: PastEvent[] = [
   },
   {
     id: "pe-3",
-    title: "Founders Summit",
+    title: "Samit osnivača",
     year: "2024",
     guests: 340,
-    category: "Corporate",
+    category: "Korporativno",
     image:
       "https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=1200&auto=format&fit=crop",
     gallery: [
@@ -184,10 +183,10 @@ export const pastEvents: PastEvent[] = [
   },
   {
     id: "pe-4",
-    title: "Solstice Rooftop",
+    title: "Solsticij na krovu",
     year: "2024",
     guests: 90,
-    category: "Private",
+    category: "Privatno",
     image:
       "https://images.unsplash.com/photo-1493707553966-283afac8c358?q=80&w=1200&auto=format&fit=crop",
     gallery: [
@@ -205,7 +204,7 @@ export const pastEvents: PastEvent[] = [
   },
   {
     id: "pe-5",
-    title: "The Velvet Room",
+    title: "Baršunasta soba",
     year: "2024",
     guests: 150,
     category: "Gala",
@@ -226,10 +225,10 @@ export const pastEvents: PastEvent[] = [
   },
   {
     id: "pe-6",
-    title: "Harvest & Vine",
+    title: "Berba i vinova loza",
     year: "2023",
     guests: 75,
-    category: "Private",
+    category: "Privatno",
     image:
       "https://images.unsplash.com/photo-1529543544282-ea669407fca3?q=80&w=1200&auto=format&fit=crop",
     gallery: [

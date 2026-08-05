@@ -49,7 +49,7 @@ export default function PreviousEvents() {
                 </h3>
 
                 <p className="flex items-center gap-1.5 text-white/70 text-sm mt-2">
-                  <Users size={14} /> {ev.guests} guests
+                  <Users size={14} /> {ev.guests} gostiju
                 </p>
 
                 <div className="mt-4 inline-flex bg-black/30 backdrop-blur-sm rounded-lg px-3 py-2">

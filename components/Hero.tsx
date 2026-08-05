@@ -38,10 +38,10 @@ const fadeUp = {
 export default function Hero() {
   const { d, h, m, s } = useCountdown(currentEvent.date);
   const unit = [
-    { label: "Days", value: d },
-    { label: "Hours", value: h },
-    { label: "Minutes", value: m },
-    { label: "Seconds", value: s },
+    { label: "Dana", value: d },
+    { label: "Sati", value: h },
+    { label: "Minuta", value: m },
+    { label: "Sekundi", value: s },
   ];
 
   return (
