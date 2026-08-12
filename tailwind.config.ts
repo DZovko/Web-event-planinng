@@ -7,15 +7,19 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      /* Extra breakpoint for very small phones (iPhone SE and similar) */
+      screens: {
+        xs: "420px",
+      },
       colors: {
         ink: "#1F2937",
         gold: {
-          DEFAULT: "#D4AF37",
-          light: "#E4C766",
-          dark: "#B8941F",
+          DEFAULT: "#94283b",
+          light: "#b8455a",
+          dark: "#751f2f",
         },
-        paper: "#F8F9FA",
-        cream: "#FCFBF8",
+        /* Single page background. Also mirrored as --page-bg in globals.css. */
+        cream: "#edebd6",
       },
       fontFamily: {
         display: ["var(--font-poppins)", "sans-serif"],

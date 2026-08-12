@@ -4,6 +4,7 @@ const LINKS = [
   { href: "#about", label: "O nama" },
   { href: "#events", label: "Eventi" },
   { href: "#past", label: "Prijašnji radovi" },
+  { href: "#partners", label: "Partneri" },
   { href: "#contact", label: "Kontakt" },
 ];
 

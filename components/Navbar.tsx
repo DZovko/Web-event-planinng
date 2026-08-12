@@ -9,7 +9,7 @@ const LINKS = [
   { href: "#events", label: "Eventi" },
 
   { href: "#past", label: "Naš Rad" },
-
+  { href: "#partners", label: "Partneri" },
   { href: "#contact", label: "Kontakt" },
 ];
 
@@ -66,7 +66,7 @@ export default function Navbar() {
         </nav>
 
         <button
-          aria-label={open ? "Close menu" : "Open menu"}
+          aria-label={open ? "Zatvori izbornik" : "Otvori izbornik"}
           onClick={() => setOpen((v) => !v)}
           className={`lg:hidden ${solid ? "text-ink" : "text-white"}`}
         >

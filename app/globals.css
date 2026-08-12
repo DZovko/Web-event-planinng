@@ -2,28 +2,48 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ==========================================================================
+   CHANGE MAIN BACKGROUND COLOR HERE
+   This single value drives the background of the entire site. Every section
+   inherits it, so there is exactly one place to edit. If you change it, also
+   update `cream` in tailwind.config.ts so utility classes stay in sync.
+   ========================================================================== */
+:root {
+  --page-bg: #edebd6;
+
+  /* Derived surfaces. These are tints of the page background, not new colors,
+     so cards stay legible without breaking the single-background rule. */
+  --surface-raised: rgba(255, 255, 255, 0.42);
+  --surface-line: rgba(31, 41, 55, 0.12);
+}
+
 html {
   scroll-behavior: smooth;
+  background-color: var(--page-bg);
 }
 
 body {
-  @apply bg-cream text-ink font-body antialiased;
+  background-color: var(--page-bg);
+  /* Belt and braces against sideways scroll on phones. Decorative transforms
+     (scaled hero backdrop, animated entries) must never create a scrollbar. */
+  overflow-x: hidden;
+  @apply text-ink font-body antialiased;
 }
 
 ::selection {
-  background-color: #D4AF37;
-  color: #1F2937;
+  background-color: #94283b;
+  color: #edebd6;
 }
 
-/* Thin gold hairline divider used as the recurring structural motif */
+/* Thin hairline divider used as the recurring structural motif */
 .hairline {
   height: 1px;
-  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+  background: linear-gradient(90deg, transparent, #94283b, transparent);
 }
 
 .hairline-solid {
   height: 1px;
-  background-color: rgba(212, 175, 55, 0.35);
+  background-color: rgba(148, 40, 59, 0.28);
 }
 
 .eyebrow {
@@ -31,7 +51,49 @@ body {
 }
 
 .container-x {
-  @apply max-w-8xl mx-auto px-6 md:px-10 lg:px-16;
+  @apply max-w-8xl mx-auto px-5 sm:px-6 md:px-10 lg:px-16;
+}
+
+/* Raised card surface: a tint of the page background, never a different color */
+.surface {
+  background-color: var(--surface-raised);
+  border: 1px solid var(--surface-line);
+}
+
+.card-frame {
+  border: 1px solid var(--surface-line);
+}
+
+/* Horizontal scrollers (carousels) share one utility instead of repeating
+   the same six arbitrary variants on every track. */
+.scroll-track {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+
+  /* Scroll snapping aligns items to the scrollport edge and ignores padding,
+     which would push the first card out of line with the section heading.
+     scroll-padding mirrors .container-x so snapped cards stay on the grid. */
+  scroll-padding-left: 1.25rem;
+}
+@media (min-width: 640px) {
+  .scroll-track {
+    scroll-padding-left: 1.5rem;
+  }
+}
+@media (min-width: 768px) {
+  .scroll-track {
+    scroll-padding-left: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .scroll-track {
+    scroll-padding-left: 4rem;
+  }
+}
+.scroll-track::-webkit-scrollbar {
+  display: none;
 }
 
 /* Custom scrollbar */
@@ -39,15 +101,17 @@ body {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #F8F9FA;
+  background: var(--page-bg);
 }
 ::-webkit-scrollbar-thumb {
-  background: #D4AF37;
+  background: #94283b;
   border-radius: 8px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
+  *,
+  *::before,
+  *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
@@ -60,11 +124,13 @@ a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible,
-select:focus-visible {
-  outline: 2px solid #D4AF37;
+select:focus-visible,
+summary:focus-visible {
+  outline: 2px solid #94283b;
   outline-offset: 3px;
 }
 
-.card-frame {
-  border: 1px solid rgba(31, 41, 55, 0.08);
+/* Lock background scroll while a modal or lightbox is open */
+body.overlay-open {
+  overflow: hidden;
 }

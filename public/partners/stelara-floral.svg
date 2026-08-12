@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 130" width="300" height="130" role="img" aria-label="STELARA">
+  <text x="150.0" y="57" text-anchor="middle" dominant-baseline="central"
+        font-family="Georgia, 'Times New Roman', serif" font-size="34"
+        letter-spacing="5.2" fill="currentColor">STELARA</text>
+  <line x1="90" y1="91" x2="210" y2="91"
+        stroke="currentColor" stroke-width="1.5" />
+</svg>

@@ -5,12 +5,12 @@ import { Compass, Sparkles } from "lucide-react";
 
 export default function About() {
   return (
-    <section id="about" className="py-24 md:py-32 bg-cream">
+    <section id="about" className="py-16 md:py-24">
       <div className="container-x grid lg:grid-cols-2 gap-14 lg:gap-20 items-center">
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
         >
           <span className="eyebrow">O nama</span>
@@ -53,9 +53,9 @@ export default function About() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, x: 30 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.7, ease: "easeOut" }}
           className="relative"
         >
