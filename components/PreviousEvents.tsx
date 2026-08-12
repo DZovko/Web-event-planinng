@@ -19,7 +19,7 @@ export default function PreviousEvents() {
         <div className="container-x mb-10">
           <span className="eyebrow">Portfolio</span>
           <h2 className="font-display text-3xl md:text-4xl font-semibold text-ink mt-3">
-            Prijašnji eventi
+            Prijašnji događaji
           </h2>
         </div>
 

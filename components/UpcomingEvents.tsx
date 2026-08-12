@@ -26,7 +26,7 @@ export default function UpcomingEvents() {
         <div>
           <span className="eyebrow">Uskoro</span>
           <h2 className="font-display text-3xl md:text-4xl font-semibold text-ink mt-3">
-            Nadolazeći eventi
+            Nadolazeći događaji
           </h2>
         </div>
 

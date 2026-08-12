@@ -2,7 +2,7 @@ import { Instagram, Facebook, Linkedin } from "lucide-react";
 
 const LINKS = [
   { href: "#about", label: "O nama" },
-  { href: "#events", label: "Eventi" },
+  { href: "#events", label: "Događaji" },
   { href: "#past", label: "Prijašnji radovi" },
   { href: "#partners", label: "Partneri" },
   { href: "#contact", label: "Kontakt" },
@@ -17,8 +17,8 @@ export default function Footer() {
             Saico
           </span>
           <p className="text-white/50 text-sm mt-4 leading-relaxed max-w-xs">
-            Profinjeno planiranje i produkcija eventa, gala večeri, vjenčanja i
-            privatnih proslava diljem Hrvatske.
+            Profinjeno planiranje i produkcija događaja, gala večeri, vjenčanja
+            i privatnih proslava diljem Hrvatske.
           </p>
         </div>
 

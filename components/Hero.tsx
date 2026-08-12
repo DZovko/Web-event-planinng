@@ -78,7 +78,7 @@ export default function Hero() {
             variants={fadeUp}
             className="font-display text-xs tracking-widest2 uppercase text-gold-light"
           >
-            Trenutni event
+            Trenutni događaj
           </motion.span>
 
           <motion.h1
@@ -125,7 +125,7 @@ export default function Hero() {
               href="#events"
               className="bg-gold text-white px-6 sm:px-7 py-3 text-sm font-semibold tracking-wide transition-transform hover:-translate-y-0.5"
             >
-              Pogledaj event
+              Pogledaj događaj
             </a>
             <a
               href="#contact"
@@ -169,7 +169,7 @@ export default function Hero() {
         >
           <div className="flex items-center gap-4">
             <span className="text-[11px] tracking-widest2 uppercase text-white/60 whitespace-nowrap">
-              Partneri eventa
+              Partneri događaja
             </span>
             <span className="h-px flex-1 bg-white/20" />
           </div>

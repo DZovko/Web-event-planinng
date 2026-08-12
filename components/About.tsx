@@ -27,9 +27,9 @@ export default function About() {
                   Naša vizija
                 </h3>
                 <p className="text-ink/65 mt-2 leading-relaxed">
-                  Suzdržanost kao oblik luksuza. Vjerujemo da su najbolji eventi
-                  uređeni, a ne dekorirani, svaki detalj zaslužuje svoje mjesto
-                  u prostoru.
+                  Suzdržanost kao oblik luksuza. Vjerujemo da su najbolji
+                  događaji uređeni, a ne dekorirani, svaki detalj zaslužuje
+                  svoje mjesto u prostoru.
                 </p>
               </div>
             </div>
@@ -44,8 +44,8 @@ export default function About() {
                 </h3>
                 <p className="text-ink/65 mt-2 leading-relaxed">
                   Preuzimamo cjelokupnu težinu produkcije, budžeta, dobavljača i
-                  rasporeda, kako bi naši klijenti doživjeli vlastiti event kao
-                  gost, a ne kao organizator.
+                  rasporeda, kako bi naši klijenti doživjeli vlastiti događaj
+                  kao gost, a ne kao organizator.
                 </p>
               </div>
             </div>
@@ -62,7 +62,7 @@ export default function About() {
           <div className="relative aspect-[4/5] overflow-hidden">
             <img
               src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?q=80&w=1400&auto=format&fit=crop"
-              alt="Postava stola na produkciji Solene Events"
+              alt="Postava stola na produkciji Saico događaja"
               className="h-full w-full object-cover"
               loading="lazy"
             />
@@ -70,7 +70,7 @@ export default function About() {
           <div className="absolute -bottom-8 -left-8 hidden md:block bg-ink text-white px-8 py-6">
             <div className="font-display text-3xl text-gold">120+</div>
             <div className="text-xs tracking-widest2 uppercase text-white/70 mt-1">
-              Organiziranih eventova
+              Organiziranih događaja
             </div>
           </div>
         </motion.div>
